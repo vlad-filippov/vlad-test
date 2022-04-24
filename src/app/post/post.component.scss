@@ -1,0 +1,14 @@
+.post {
+  height: 100px;
+  cursor: pointer;
+  overflow: hidden;
+
+  .ids {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 10px;
+    text-overflow: ellipsis;
+  }
+}
