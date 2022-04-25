@@ -25,15 +25,12 @@
   justify-content: center;
   height: 100px;
   position: relative;
-  border-radius: 30px;
   margin-bottom: 30px;
 
   h2 {
     position: absolute;
     font-size: 100px;
     text-transform: uppercase;
-    font-weight: bold;
-    //font-family: sans-serif;
 
     &:nth-child(1) {
       color: transparent;
