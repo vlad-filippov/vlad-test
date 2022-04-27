@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './post/post.component';
+import { NgxsModule } from '@ngxs/store';
+import { environment } from '../environments/environment';
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { PostsState } from './state/posts.state';
 
 @NgModule({
   declarations: [
@@ -15,6 +19,8 @@ import { PostComponent } from './post/post.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxsModule.forRoot([PostsState], { developmentMode: !environment.production }),
+    NgxsReduxDevtoolsPluginModule.forRoot({ disabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]
